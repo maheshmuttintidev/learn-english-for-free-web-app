@@ -4,8 +4,26 @@ const Home = () => {
     return (
         <Layout>
             <section className="hero auto-height">
-                <h2>Learn English for Free</h2>
-                <p className="big-p">You're in free space</p>
+                <h1 className="hero-title">Learn English for Free</h1>
+                <p className="big-p1 hero-p">You're in free space</p>
+            </section>
+            <section className="trainer auto-height">
+                <div className="trainer-sub-wrapper">
+                    <h1 className="hero-title">Trainer</h1>
+                    <p className="big-p1 hero-p colorized">Mrs. Persis Anand</p>
+                    <p className="big-p2 hero-p">21 years of Experience into teaching</p>
+                </div>
+            </section>
+            <section className="courses auto-height">
+                <h1 className="hero-title ml-2 courses-title">Courses</h1>
+                <ul className="courses-list">
+                    <li>
+                        Communication and Personal Development
+                        </li>
+                    <li>
+                        IELTS - International English Language Testing System
+                        </li>
+                </ul>
             </section>
         </Layout>
     )

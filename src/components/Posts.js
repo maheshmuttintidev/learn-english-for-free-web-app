@@ -5,17 +5,13 @@ import Image2 from '../assets/pronounciation_sample_pic.jpg'
 const Posts = () => {
   return (
     <Layout>
-      <main className="flex-column-center auto-height posts">
-        <h2>Posts</h2>
+      <main className="flex-column-center posts">
+        <h1 className="post-title">Posts</h1>
         <article className="card">
           <img loading="lazy" decoding="async" src={Image1} alt="" />
-          <h4>Sub Heading</h4>
-          <p style={{paddingBottom: ".5rem"}}>lorem ipsum dolor sit amet, consectetur...</p>
         </article>
         <article className="card">
           <img loading="lazy" decoding="async" src={Image2} alt="" />
-          <h4>Sub Heading</h4>
-          <p style={{paddingBottom: ".5rem"}}>lorem ipsum dolor sit amet, consectetur...</p>
         </article>
       </main>
     </Layout>

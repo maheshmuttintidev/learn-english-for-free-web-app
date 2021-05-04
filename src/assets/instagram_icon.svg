@@ -5,8 +5,8 @@
 	 width="44.8333321px" height="40.8333321px" viewBox="0 0 44.8333321 40.8333321"
 	 style="enable-background:new 0 0 44.8333321 40.8333321;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#353838;}
-	.st1{fill:#FFFFFF;}
+	.st0{fill: white;}
+	.st1{fill:#5e2ee4;}
 </style>
 <path class="st0" d="M40.8333321,40.8333321H4c-2.2,0-4-1.7999992-4-4V4c0-2.2,1.8-4,4-4h36.8333321c2.2000008,0,4,1.8,4,4
 	v32.8333321C44.8333321,39.0333328,43.0333328,40.8333321,40.8333321,40.8333321z"/>

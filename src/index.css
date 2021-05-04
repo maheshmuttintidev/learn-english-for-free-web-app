@@ -1,22 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Itim", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-@supports (prefers-color-scheme: dark) {
-  html {
-    background-color: #000;
-    color: white;
-  }
 }
 
 *,
@@ -28,8 +21,132 @@ code {
   line-height: 1.5;
 }
 
+.external-link {
+  border: 1px solid transparent;
+}
+
+.external-link:hover {
+  border-bottom: 1px dotted white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 12px rgba(20, 179, 228, 0.32);
+  border-radius: 0 0 3px 3px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  padding: 7px 2rem;
+  gap: 3rem;
+}
+header > * {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 0 0 3px 3px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0 5px 5px 0;
+  margin-top: 2rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+header,
+footer {
+  background-image: linear-gradient(
+    rgba(16, 231, 16, 0.986),
+    rgba(6, 182, 50, 0.986)
+  );
+  z-index: 3;
+  color: white !important;
+}
+.header-title {
+  color: rgba(233, 18, 204, 0.986);
+  text-shadow: 0 4px 3px rgba(40, 50, 50, 0.6);
+}
+nav {
+  display: flex;
+}
+@media screen and (max-width: 666px) {
+
+  header {
+    display: flex;
+    position: relative;
+  }
+  nav {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    cursor: pointer;
+  }
+  nav:hover {
+    border: 2px dotted white;
+  }
+  nav:hover ul {
+    display: flex !important;
+    flex-flow: column wrap !important;
+    justify-content: center;
+    align-items: center !important;
+    padding: 8px 0;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    background-image: linear-gradient(rgb(228, 19, 200), rgb(163, 19, 144));
+    border-radius: 5px;
+    box-shadow: 0 1rem 0.6rem -0.4rem rgba(0, 0, 0);
+    color: white;
+    animation: flip-reverse forwards 0.4s;
+    transform-origin: center;
+  }
+  @keyframes flip-reverse {
+    from {
+      transform: rotate(-180deg) scale(0);
+    }
+    to {
+      transform: rotate(0) scale(1);
+    }
+  }
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 4px;
+    width: 2rem;
+    background-color: white;
+    box-shadow: 0 8px 0 0 white, 0 16px 0 0 white;
+  }
+  ul {
+    display: none !important;
+  }
+}
+
+.hero-title {
+  color: orange;
+  text-shadow: 0 3px 3px rgb(0, 0, 0);
+}
+
+.hero-p {
+  color: rgb(5, 5, 88);
+  text-shadow: 0 2px 3px rgba(26, 10, 175, 0.877);
+}
+
 h1 {
   font-size: 3rem;
+  font-family: "Krona One", sans-serif;
 }
 
 h2 {
@@ -37,7 +154,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 h4 {
@@ -67,8 +184,53 @@ h4 {
   gap: 1rem;
 }
 
+.contact-title {
+  color: rgb(16, 13, 196);
+  padding: 1rem 7px 7px 7px;
+  text-shadow: -1px 1px 0px rgb(238, 195, 195), 0 0 20px rgba(45, 45, 245, 0.9),
+    0 0 10px cyan, 0 0 15px cyan, 0 0 25px cyan;
+  border-bottom: 2px dotted white;
+}
+
+.phone-p {
+  background-color: rgb(226, 58, 226);
+  color: white;
+  border-radius: 3px;
+  padding: 2px 8px;
+}
+.or-span {
+  background-color: aquamarine;
+  color: black;
+}
+
+.email-p {
+  color: black;
+  border-radius: 3px;
+  padding: 2px 8px;
+  background-color: rgb(214, 26, 26);
+}
+
 .contact {
-  justify-content: flex-start !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.contact > *:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  position: relative;
+  top: 12px;
+  right: 12px;
+}
+
+.contact > *:last-child {
+  display: flex;
+  align-items: center;
 }
 
 .w-a {
@@ -81,6 +243,11 @@ h4 {
 
 .zoom-image {
   width: 6rem;
+  margin: 1rem 0;
+}
+
+.zoom-image:hover {
+  transform: scale(1.05);
 }
 
 span,
@@ -106,24 +273,41 @@ ol {
 }
 
 .nav-link {
-  font-size: 1.5rem;
-  transition: all 0.3s ease-out;
+  font-size: 1.7rem;
+  transition: all 0.2s ease-out;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  border: 1.5px dotted transparent;
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  box-shadow: 0px 4px 4px rgba(9, 113, 211, 0.6);
+  background-color: rgb(94, 46, 228);
+  border: 1.5px dotted rgb(240, 231, 231);
+}
+
+.nav-link:active {
+  box-shadow: 0px 4px 4px rgba(9, 113, 211, 0.6);
+  background-color: rgb(94, 46, 228);
 }
 
 .card {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
-  border-radius: 5px;
-  width: 60vw;
+  width: calc(100% - 5rem);
+  margin: 1rem 0;
 }
 
 .card > img {
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(241, 235, 235, 0.5),
+    0 -2px 12px rgba(241, 241, 241, 1);
   height: auto;
   width: inherit;
   object-fit: contain;
+}
+
+.post-title {
+  border-bottom: 2px dotted white;
+  padding-top: 1rem;
 }
 
 .hero {
@@ -136,6 +320,7 @@ ol {
   text-align: center;
   justify-content: center;
   color: white;
+  min-height: 400px;
 }
 
 .hero::after {
@@ -145,7 +330,7 @@ ol {
   background-repeat: no-repeat;
   background-position: fixed;
   transition: transform 0.33s ease-out;
-  height: 100%;
+  height: 100vh !important;
   width: 100%;
   position: absolute;
   top: 0;
@@ -160,7 +345,7 @@ ol {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(12, 12, 12, 0.562);
+  background-color: rgba(19, 17, 19, 0.555);
   z-index: -1;
 }
 
@@ -168,7 +353,135 @@ ol {
   transform: scale(1.15);
 }
 
+.trainer {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  min-height: 400px;
+}
+
+.trainer::after {
+  content: "";
+  background-image: url(./assets/teaching_on_board.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  transition: transform 0.33s ease-out;
+  height: 100vh !important;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.trainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(19, 17, 19, 0.555);
+  z-index: -1;
+}
+
+.trainer:hover::after {
+  transform: scale(1.15);
+}
+
+.trainer-sub-wrapper {
+  background-color: aliceblue;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
 .big-p {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+}
+
+.courses {
+  background-color: aliceblue;
+  color: black;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.courses-title::before {
+  content: "FREE";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgb(224, 204, 17);
+  color: rgb(14, 5, 12);
+  height: 2rem;
+  padding: 5px 8px;
+  font-size: 1rem;
+  text-shadow: 0 0 0 transparent !important;
+  box-shadow: 0 3px 4px rgb(58, 52, 21),
+              -2px 0 4px rgb(65, 57, 15);
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  from {
+    background-color: rgb(163, 148, 10);
+  } to {
+    background-color: rgb(235, 217, 55);
+  }
+}
+
+.courses-list {
+  display: flex !important;
+  flex-flow: column;
+  padding: 2rem 0;
+  margin: 0 2rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.courses-list li {
+  font-size: 2rem;
+  position: relative;
+  margin-left: 1rem;
+  left: 1rem;
+  padding-left: 3rem;
+  color: black;
+}
+
+.courses-list li::before {
+  content: "";
+  position: absolute;
+  background-image: url("./assets/bullet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.colorized {
+  color: rgb(228, 19, 200);
+}
+
+.big-p1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.big-p2 {
   font-size: 2rem;
   margin-top: 1rem;
 }
@@ -177,28 +490,12 @@ ol {
   align-self: flex-start !important;
 }
 
-footer {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 4rem;
-  padding-bottom: 2rem;
-}
-
-.auto-height {
-  min-height: 80vh;
-}
-.auto-height.posts {
-  justify-content: flex-start !important;
-}
-
 .contact-wrapper {
   position: relative;
   color: white;
   overflow: hidden;
   z-index: 0;
+  padding: 1rem 0;
 }
 
 .contact-wrapper > div > div {
@@ -210,7 +507,7 @@ footer {
   background-image: url("./assets/listening_the_class_by_students.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: fixed;
+  background-position: center;
   transition: transform 0.33s ease-out;
   height: 100%;
   width: 100%;
@@ -235,6 +532,12 @@ footer {
   transform: scale(1.15);
 }
 
+.footer-icon {
+  border-radius: 3px;
+}
+
 .footer-icon:hover {
-  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.6);  
+  box-shadow: 0px 4px 4px rgba(9, 113, 211, 0.6),
+    0 -1px 3px rgba(27, 187, 236, 0.973), 0 0 12px 5px rgba(16, 155, 197, 0.973);
+  background-color: rgb(94, 46, 228);
 }

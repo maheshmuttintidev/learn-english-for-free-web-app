@@ -6,16 +6,15 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <h3>Follow Us On:</h3>
         <div className="flex-row-center">
             <a target="_blank" href="https://facebook.com/" rel="noopener noreferrer">
-                <img loading="lazy" src={FbIcon} alt="" className="footer-icon" />
+                <img loading="lazy" src={FbIcon} alt="facebook" className="footer-icon" />
             </a>
             <a target="_blank" href="https://instagram.com/" rel="noopener noreferrer">
-                <img loading="lazy" src={InstaIcon} alt="" className="footer-icon" />
+                <img loading="lazy" src={InstaIcon} alt="instagram" className="footer-icon" />
             </a>
             <a target="_blank" href="https://twitter.com/" rel="noopener noreferrer">
-                <img loading="lazy" src={TwitterIcon} alt="" className="footer-icon" />
+                <img loading="lazy" src={TwitterIcon} alt="twitter" className="footer-icon" />
             </a>
         </div>
       </footer>
