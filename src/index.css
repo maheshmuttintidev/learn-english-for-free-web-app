@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@supports (prefers-color-scheme: dark) {
+  html {
+    background-color: #000;
+    color: white;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+.curvy-bg {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contact {
+  justify-content: flex-start !important;
+}
+
+.w-a {
+  width: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.zoom-image {
+  width: 6rem;
+}
+
+span,
+a,
+img,
+input,
+button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,
+ol {
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  transition: all 0.3s ease-out;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.card {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  width: 60vw;
+}
+
+.card > img {
+  height: auto;
+  width: inherit;
+  object-fit: contain;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  background-image: url(./assets/learn_english_sample1_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  transition: transform 0.33s ease-out;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 12, 12, 0.562);
+  z-index: -1;
+}
+
+.hero:hover::after {
+  transform: scale(1.15);
+}
+
+.big-p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.flex-start {
+  align-self: flex-start !important;
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.auto-height {
+  min-height: 80vh;
+}
+.auto-height.posts {
+  justify-content: flex-start !important;
+}
+
+.contact-wrapper {
+  position: relative;
+  color: white;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.contact-wrapper > div > div {
+  width: 20rem;
+}
+
+.contact-wrapper::after {
+  content: "";
+  background-image: url("./assets/listening_the_class_by_students.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  transition: transform 0.33s ease-out;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.contact-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 12, 12, 0.562);
+  z-index: -1;
+}
+
+.contact-wrapper:hover::after {
+  transform: scale(1.15);
+}
+
+.footer-icon:hover {
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.6);  
+}
