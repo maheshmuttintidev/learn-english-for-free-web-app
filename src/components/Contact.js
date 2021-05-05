@@ -23,7 +23,7 @@ const Contact = () => {
           </strong>
         </div>
         <div>
-          <h1 className="contact-title">Join on:</h1>
+          <h1 className="contact-title">Join us on:</h1>
           <a className="external-img-link" target="_blank" href="https://zoom.us/" rel="noopener noreferrer">
             <img src={ZoomIcon} alt="" className="zoom-image" />
           </a>

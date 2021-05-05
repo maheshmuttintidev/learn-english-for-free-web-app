@@ -4,8 +4,8 @@ const Home = () => {
     return (
         <Layout>
             <section className="hero auto-height">
-                <h1 className="hero-title">Free Spoken English for Poor</h1>
-                <p className="big-p1 hero-p s-1">You're in free space</p>
+                <h1 className="hero-title">Free Spoken English for the Poor</h1>
+                <p className="big-p1 hero-p s-1">Crack Interview...</p>
             </section>
             <section className="trainer auto-height">
                 <div className="trainer-sub-wrapper">
@@ -19,10 +19,10 @@ const Home = () => {
                 <ul className="courses-list">
                     <li>
                         Communication and Personality Development
-                        </li>
+                    </li>
                     <li>
                         IELTS - International English Language Testing System
-                        </li>
+                    </li>
                 </ul>
             </section>
         </Layout>
