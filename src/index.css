@@ -425,6 +425,7 @@ ol {
   background-color: aliceblue;
   padding: 5px 8px;
   border-radius: 5px;
+  box-shadow: 0 0 3rem 1rem aliceblue;
 }
 
 .big-p {
