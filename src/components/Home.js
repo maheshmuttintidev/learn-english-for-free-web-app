@@ -18,7 +18,7 @@ const Home = () => {
                 <h1 className="hero-title ml-2 courses-title">Courses</h1>
                 <ul className="courses-list">
                     <li>
-                        Communication and Personal Development
+                        Communication and Personality Development
                         </li>
                     <li>
                         IELTS - International English Language Testing System
