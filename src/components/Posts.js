@@ -5,14 +5,16 @@ import Image2 from '../assets/pronounciation_sample_pic.jpg'
 const Posts = () => {
   return (
     <Layout>
-      <main className="flex-column-center posts">
-        <h1 className="post-title">Posts</h1>
-        <article className="card">
-          <img loading="lazy" decoding="async" src={Image1} alt="" />
-        </article>
-        <article className="card">
-          <img loading="lazy" decoding="async" src={Image2} alt="" />
-        </article>
+      <main className="posts">
+        <h1 className="post-title">Gallery</h1>
+        <div className="grid">
+          <article className="card">
+            <img loading="lazy" decoding="async" src={Image1} alt="" />
+          </article>
+          <article className="card">
+            <img loading="lazy" decoding="async" src={Image2} alt="" />
+          </article>
+        </div>
       </main>
     </Layout>
   )

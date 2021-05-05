@@ -4,8 +4,8 @@ const Home = () => {
     return (
         <Layout>
             <section className="hero auto-height">
-                <h1 className="hero-title">Learn English for Free</h1>
-                <p className="big-p1 hero-p">You're in free space</p>
+                <h1 className="hero-title">Free Spoken English for Poor</h1>
+                <p className="big-p1 hero-p s-1">You're in free space</p>
             </section>
             <section className="trainer auto-height">
                 <div className="trainer-sub-wrapper">

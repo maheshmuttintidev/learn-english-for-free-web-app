@@ -11,14 +11,14 @@ const Contact = () => {
         <div className="contact">
           <img src={PhoneIcon} alt="" className="flex-start w-a" />
           <strong className="big-p phone-p" title="call to this number">
-            <a className="external-link" href="tel:9603757304" target="_blank" rel="noopener noreferrer">+91-9603757304</a>
+            <a className="external-link" href="tel:9848006050" target="_blank" rel="noopener noreferrer">+91-9848006050</a>
           </strong>
         </div>
         <div className="contact">
           <img src={EmailIcon} alt="" className="flex-start w-a" />
           <strong className="big-p email-p" title="mail to this gmail">
-            <a className="external-link" href="mailto:spoken.english@gmail.com" target="_blank" rel="noopener noreferrer">
-              spoken.english@gmail.com
+            <a className="external-link" href="mailto:spokenglish.free@gmail.com" target="_blank" rel="noopener noreferrer">
+              spokenglish.free@gmail.com
             </a>
           </strong>
         </div>

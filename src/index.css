@@ -39,6 +39,7 @@ header {
   justify-content: space-evenly;
   padding: 7px 2rem;
   gap: 3rem;
+  min-width: 350px;
 }
 header > * {
   display: flex;
@@ -134,6 +135,18 @@ nav {
   }
 }
 
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  gap: 2rem;
+  
+}
+
+.grid > * {
+  flex: 1 1 350px;
+  min-width: 300px;
+}
+
 .hero-title {
   color: orange;
   text-shadow: 0 3px 3px rgb(0, 0, 0);
@@ -141,6 +154,11 @@ nav {
 
 .hero-p {
   color: rgb(5, 5, 88);
+  text-shadow: 0 2px 3px rgba(26, 10, 175, 0.877);
+}
+
+.s-1 {
+  color: rgb(54, 245, 252);
   text-shadow: 0 2px 3px rgba(26, 10, 175, 0.877);
 }
 
@@ -292,7 +310,7 @@ ol {
 }
 
 .card {
-  width: calc(100% - 5rem);
+  width: 100%;
   margin: 1rem 0;
 }
 
@@ -305,9 +323,16 @@ ol {
   object-fit: contain;
 }
 
+.posts {
+  padding: 0 1rem;
+}
+
 .post-title {
   border-bottom: 2px dotted white;
   padding-top: 1rem;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto 1rem;
 }
 
 .hero {
