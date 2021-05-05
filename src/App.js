@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 import Contact from './components/Contact'
-import Posts from './components/Posts'
+import Gallery from './components/Gallery'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Router forceRefresh={true}>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/posts" component={Posts} />
+          <Route exact path="/gallery" component={Gallery} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
       </Router>

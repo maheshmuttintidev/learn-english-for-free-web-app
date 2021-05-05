@@ -19,6 +19,9 @@ code {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .external-link {
@@ -133,18 +136,6 @@ nav {
   ul {
     display: none !important;
   }
-}
-
-.grid {
-  display: flex;
-  flex-flow: wrap;
-  gap: 2rem;
-  
-}
-
-.grid > * {
-  flex: 1 1 350px;
-  min-width: 300px;
 }
 
 .hero-title {
@@ -309,17 +300,26 @@ ol {
   background-color: rgb(94, 46, 228);
 }
 
-.card {
-  width: 100%;
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  gap: 2rem;
+  
+}
+
+.grid > * {
+  flex: 1 1 350px;
+  min-width: 350px;
   margin: 1rem 0;
+  width: 350px;
+  display: flex;
+  justify-content: center;
 }
 
 .card > img {
-  border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(241, 235, 235, 0.5),
-    0 -2px 12px rgba(241, 241, 241, 1);
-  height: auto;
+  height: 100%;
   width: inherit;
+  filter: blur(1px);
   object-fit: contain;
 }
 
